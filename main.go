@@ -34,6 +34,7 @@ func init() {
 
 func main() {
 	e := echo.New()
+	log.Println("echo start")
 	e.Use(middleware.Logger())
 	echoGroup := e.Group(G_API_WEB)
 
