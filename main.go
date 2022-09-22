@@ -1,7 +1,6 @@
 package main
 
 import (
-	"echo/handler"
 	"fmt"
 	"net/http"
 	"os"
@@ -9,7 +8,6 @@ import (
 	"strconv"
 
 	"github.com/labstack/echo/v4"
-	"github.com/labstack/echo/v4/middleware"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -33,7 +31,6 @@ func init() {
 }
 
 func main() {
-
 
 	e.POST("/form", func(c echo.Context) error {
 		name := c.FormValue("name")
