@@ -33,23 +33,7 @@ func init() {
 }
 
 func main() {
-	e := echo.New()
-	e.Use(middleware.Logger())
-	echoGroup := e.Group(G_API_WEB)
 
-	echoGroup.PUT("/dashboard/background", handler.PutBackgrounChange)
-
-	e.GET("/", func(c echo.Context) error {
-		fmt.Println("GET /")
-		return c.String(http.StatusOK, "Hello, echo!")
-	})
-
-	e.POST("/query", handler.Query)
-
-	e.GET("/path/:name", func(c echo.Context) error {
-		name := c.Param("name")
-		return c.String(200, name)
-	})
 
 	e.POST("/form", func(c echo.Context) error {
 		name := c.FormValue("name")
