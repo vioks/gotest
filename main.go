@@ -1,13 +1,17 @@
 package main
 
 import (
+<<<<<<< HEAD
 	"fmt"
 	"net/http"
+=======
+>>>>>>> won
 	"os"
-	"reflect"
-	"strconv"
 
+<<<<<<< HEAD
 	"github.com/labstack/echo/v4"
+=======
+>>>>>>> won
 	log "github.com/sirupsen/logrus"
 )
 
@@ -31,6 +35,7 @@ func init() {
 }
 
 func main() {
+<<<<<<< HEAD
 
 	e.POST("/form", func(c echo.Context) error {
 		name := c.FormValue("name")
@@ -76,5 +81,7 @@ func main() {
 		return c.JSONPretty(http.StatusOK, user, "	")
 	})
 
+=======
+>>>>>>> won
 	e.Logger.Fatal(e.Start(":3000"))
 }
